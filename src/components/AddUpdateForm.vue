@@ -178,12 +178,14 @@ export default {
         var newEntry = [titleVal, descriptionVal, dateVal, priorityVal, false]
         if (this.isAdd) {
           this.varFromHeader[0].push(newEntry)
+          toastr.options.positionClass = 'toast-bottom-right';
           toastr.success("Task added sucessfully.")
         }
         else {
           for (let i = 0; i < this.varFromHeader[0].length; i++) {
             if(this.varFromHeader[0][i][0] == titleVal) {
               this.varFromHeader[0][i] = newEntry
+              toastr.options.positionClass = 'toast-bottom-right';
               toastr.success("Task editted sucessfully.")
               break;
             }

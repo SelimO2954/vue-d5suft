@@ -51,6 +51,7 @@ export default {
       for (let i = 0; i < this.varFromParent.length; i++) {
         if(this.varFromParent[i] == entry) {
           this.varFromParent.splice(i,1)
+          toastr.options.positionClass = 'toast-bottom-right';
           toastr.success("Task deleted sucessfully.");
           console.log("toastr displayed")
           break;
