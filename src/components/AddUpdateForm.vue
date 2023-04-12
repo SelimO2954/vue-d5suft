@@ -148,6 +148,7 @@ export default {
       let titleVal = document.getElementById('titleinput').value
       let descriptionVal = document.getElementById('descriptioninput').value
       let dateVal = $("#deadlineinput").val();
+      let formattedDate = moment(dateVal).format("MM/DD/YYYY");
       let validTitle = true;
       if (this.isAdd) {
         for (let i = 0; i < this.varFromHeader[0].length; i++) {
@@ -175,7 +176,7 @@ export default {
         document.getElementById('titleinput').classList.add("is-valid");
       }
       if (validTitle && descriptionVal != "" && dateVal != "" && priorityVal != "") {
-        var newEntry = [titleVal, descriptionVal, dateVal, priorityVal, false]
+        var newEntry = [titleVal, descriptionVal, formattedDate, priorityVal, false]
         if (this.isAdd) {
           this.varFromHeader[0].push(newEntry)
           toastr.options.positionClass = 'toast-bottom-right';

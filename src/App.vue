@@ -35,9 +35,9 @@ export default {
   },
   data: () => ({
     var01: [
-      ['title01', 'description01', '2023-04-12', 'high', false],
-      ['title02', 'description02', '2023-04-12', 'high', true],
-      ['title03', 'description03', '2023-04-12', 'high', true],
+      ['title01', 'description01', '04/12/2023', 'high', false],
+      ['title02', 'description02', '04/12/2023', 'high', true],
+      ['title03', 'description03', '04/12/2023', 'high', true],
     ],
   }),
 };
